@@ -1,1 +1,1 @@
-Finish building the landing page of landing project with responsive design 
+Finish building the landing page of figma design project with responsive design.
