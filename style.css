@@ -31,15 +31,19 @@ nav {
 }
 .nav-logo { display: flex; align-items: center; gap: 8px; color: #fff; font-weight: 700; font-size: 18px; }
 .nav-logo-icon {
-  width: 32px; height: 32px; background: var(--secondary); border-radius: 8px;
+  width: 32px; height: 32px;  border-radius: 8px;
   display: flex; align-items: center; justify-content: center;
+}
+
+.nav-logo img {
+  mix-blend-mode: screen;
 }
 .nav-logo-icon svg { width: 18px; height: 18px; fill: #fff; }
 .nav-links { display: flex; gap: 32px; list-style: none; }
 .nav-links a { color: rgba(255,255,255,0.85); font-size: 14px; font-weight: 500; transition: color .2s; }
 .nav-links a:hover { color: #fff; }
 .nav-badge {
-  background: var(--secondary); color: #fff; font-size: 12px; font-weight: 600;
+  color: #fff; font-size: 12px; font-weight: 600;
   padding: 6px 14px; border-radius: 20px; display: flex; align-items: center; gap: 6px;
 }
 .nav-badge::before { content: ''; width: 7px; height: 7px; background: #fff; border-radius: 50%; }
@@ -125,9 +129,16 @@ nav {
   border-radius: 50%; display: flex; align-items: center; justify-content: center;
 }
 .btn-outline {
-  display: inline-flex; align-items: center; justify-content: center; gap: 8px;
-  border: 2px solid var(--secondary); color: var(--secondary); background: transparent;
-  font-size: 14px; font-weight: 700; padding: 12px 28px; border-radius: 30px; cursor: pointer; transition: all .2s;
+  display: inline-flex;  justify-content: center; gap: 8px;
+  flex-direction: column;
+  border: 2px solid var(--secondary); background: var(--secondary); 
+   color: #fff; /* White text */
+  font-size: 14px; font-weight: 700; padding: 6px 28px; border-radius: 30px; cursor: pointer; transition: all .2s;
+}
+/* we want the p ele to inherit white color if it has it's own color */
+.btn-outline p {
+  color: inherit;
+  margin: 0;
 }
 .btn-outline:hover { background: var(--secondary); color: #fff; }
 .professional-img-wrap {
@@ -162,7 +173,7 @@ nav {
   width: 44px; height: 44px; border-radius: 10px; display: flex; align-items: center; justify-content: center;
   margin-bottom: 14px; font-size: 20px;
 }
-.service-icon { background: #545971; }
+.service-icon { background:var(--fg); }
 /* .service-icon.yellow { background: #fff8e1; }
 .service-icon.green { background: #e8f5e9; }
 .service-icon.orange { background: #fff3e0; } */
